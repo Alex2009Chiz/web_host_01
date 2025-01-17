@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой пост</title>
+    <style>
+        .post {
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        .post h1 {
+            text-align: center;
+            color: #333;
+        }
+        .post img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .post p {
+            text-align: justify;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="post">
+
+
+        <h1>{{post[1]}}</h1>
+        <img src='/{{post[2]}}'>
+        <p>{{post[3]}}</p>
+
+
+    </div>
+
+</body>
+</html>

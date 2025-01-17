@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой пост</title>
+    <style>
+        .post {
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        .post h1 {
+            text-align: center;
+            color: #333;
+        }
+        .post img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .post p {
+            text-align: justify;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+<form action="/logout/">
+    <button onclick="alert('Выйти с акаунта!')">Нажми меня</button>
+</form>
+    <div class="post">
+        {%  for i in db %}
+
+        <h1>{{i[1]}}</h1>
+        <img src='/{{i[2]}}'>
+        <p>{{i[3][:20]}}</p>
+   <a href="/save_post_more/{{i[0]}}">подробнее</a>
+        {% endfor %}
+
+    </div>
+
+</body>
+</html>
